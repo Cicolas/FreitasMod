@@ -1,0 +1,3 @@
+displayName = Freitas Mod
+author = Cicolas
+version = 0.1
