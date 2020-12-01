@@ -65,6 +65,10 @@ namespace FreitasMod.NPCs
         public override void SetupShop(Chest shop, ref int nextSlot)
         {
             shop.item[nextSlot].SetDefaults(ItemID.AlphabetStatueF);
+            nextSlot++;
+            shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.Placeable.GoldF>());
+            nextSlot++;
+            shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.Placeable.PlatinumF>());
         }
     }
 }
