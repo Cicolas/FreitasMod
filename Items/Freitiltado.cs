@@ -2,7 +2,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace FreitasMod.Items
-{
+{	
 	public class Freitiltado : ModItem
 	{
 		public override void SetStaticDefaults() 
@@ -13,14 +13,14 @@ namespace FreitasMod.Items
 
 		public override void SetDefaults() 
 		{
-			item.damage = 50;
+			item.damage = 20;
 			item.melee = true;
-			item.width = 40;
-			item.height = 40;
-			item.useTime = 20;
-			item.useAnimation = 20;
-			item.useStyle = 1;
-			item.knockBack = 6;
+			item.width = 28;
+			item.height = 24;
+			item.useTime = 10;
+			item.useAnimation = 10;
+			item.useStyle = 3;
+			item.knockBack = 2;
 			item.value = 10000;
 			item.rare = 2;
 			item.UseSound = SoundID.Item1;

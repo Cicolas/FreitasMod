@@ -6,6 +6,7 @@ using Terraria.Localization;
 
 namespace FreitasMod.NPCs
 {
+    [AutoloadHead]
     public class Freitas : ModNPC
     {
         public override void SetStaticDefaults()
@@ -69,6 +70,30 @@ namespace FreitasMod.NPCs
             shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.Placeable.GoldF>());
             nextSlot++;
             shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.Placeable.PlatinumF>());
+        }
+
+        public override void TownNPCAttackProj(ref int projType, ref int attackDelay)
+        {
+            projType = ModContent.ProjectileType<Projectiles.Ball>();
+            attackDelay = 1;
+        }
+
+        public override void TownNPCAttackProjSpeed(ref float multiplier, ref float gravityCorrection, ref float randomOffset)
+        {
+            multiplier = 10f;
+            randomOffset = 2f;
+        }
+
+        public override void TownNPCAttackStrength(ref int damage, ref float knockback)
+        {
+            damage = 10;
+            knockback = 2f; 
+        }
+
+        public override void TownNPCAttackCooldown(ref int cooldown, ref int randExtraCooldown)
+        {
+            cooldown = 20;
+            randExtraCooldown = 2;
         }
     }
 }
